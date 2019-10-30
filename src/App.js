@@ -17,37 +17,47 @@ function App() {
       <div className="container">
 
 
-        <div className="col">
-
-          <div className="image-container" id="avatar-image">
-
-            <img className="tv-show-poster" src={avatar} alt='avatar the last airbender' />
-            <div className="tv-show-overlay" id="avatar-overlay">
-              <h2>Avatar the Last Airbender</h2>
-            </div>
+        <div className="image-container">
+          <img className="tv-show-poster" src={avatar} alt='avatar the last airbender' />
+          <div className="tv-show-overlay">
+            <h2>Avatar the Last Airbender</h2>
           </div>
-
         </div>
 
 
 
 
-        <div className="col">
+        <div className="image-container">
           <img className="tv-show-poster" src={biglittle} alt='Big Little Lies' />
+          <div className="tv-show-overlay">
+            <h2>Big Little Lies</h2>
+          </div>
         </div>
-        <div className="col">
+        <div className="image-container">
           <img className="tv-show-poster" src={curb} alt='Curb your Enthusiasm' />
+          <div className="tv-show-overlay">
+            <h2>Curb Your Enthusiasm</h2>
+          </div>
         </div>
       </div >
       <div className="container">
-        <div className="col">
+        <div className="image-container">
           <img className="tv-show-poster" src={GLOW} alt='GLOW' />
+          <div className="tv-show-overlay">
+            <h2>GLOW</h2>
+          </div>
         </div>
-        <div className="col">
+        <div className="image-container">
           <img className="tv-show-poster" src={naked} alt='Naked Director' />
+          <div className="tv-show-overlay">
+            <h2>Naked Director</h2>
+          </div>
         </div>
-        <div className="col">
+        <div className="image-container">
           <img className="tv-show-poster" src={rupaul} alt='rupaul' />
+          <div className="tv-show-overlay">
+            <h2>Ru Paul's Drag Race UK</h2>
+          </div>
         </div>
       </div >
     </div >
