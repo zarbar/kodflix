@@ -14,10 +14,24 @@ function App() {
     <div className="App">
       <h1>Welcome to Kodflix</h1>
       <img src={killerTomato} alt='attack of the killer tomatoes' />
-      <div class="container">
+      <div className="container">
+
+
         <div className="col">
-          <img className="tv-show-poster" src={avatar} alt='avatar the last airbender' />
+
+          <div className="image-container" id="avatar-image">
+
+            <img className="tv-show-poster" src={avatar} alt='avatar the last airbender' />
+            <div className="tv-show-overlay" id="avatar-overlay">
+              <h2>Avatar the Last Airbender</h2>
+            </div>
+          </div>
+
         </div>
+
+
+
+
         <div className="col">
           <img className="tv-show-poster" src={biglittle} alt='Big Little Lies' />
         </div>
@@ -25,7 +39,7 @@ function App() {
           <img className="tv-show-poster" src={curb} alt='Curb your Enthusiasm' />
         </div>
       </div >
-      <div class="container">
+      <div className="container">
         <div className="col">
           <img className="tv-show-poster" src={GLOW} alt='GLOW' />
         </div>
