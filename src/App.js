@@ -4,26 +4,21 @@ import Home from './Home/Home';
 import Details from './Details/Details';
 import {
   BrowserRouter as Router,
-  Switch,
   Route
 } from "react-router-dom";
-
-
 
 function App() {
   return (
     <Router>
-      < div className="App" >
-      </div >
-      <Switch>
+      < div className="App">
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/Details">
+        <Route path="/:details">
           <Details />
         </Route>
-      </Switch>
-    </Router>
+      </div>
+    </Router >
   )
 }
 
