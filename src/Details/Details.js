@@ -7,8 +7,7 @@ export default function Details(props) {
 
     React.useEffect(
         () => {
-            const timedMsg = setTimeout(() => setMessage('Coming Soon! :-P'), 3000)
-            return () => clearTimeout(timedMsg)
+            setTimeout(() => setMessage('Coming Soon! :-P'), 3000);
         }, []
     )
     let { details } = useParams();
