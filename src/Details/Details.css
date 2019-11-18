@@ -1,0 +1,29 @@
+.containerDetails {
+    display: flex;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    justify-content: center;
+}
+
+.itemDetails {
+    padding: 1em;
+}
+
+.imageDetails {
+    height: 90vh;
+    width: auto;
+}
+
+@media screen and (max-width: 800px) {
+
+    .containerDetails {
+        display: flex;
+        padding: 1em;
+        flex-direction: column;
+    }
+
+    .imageDetails {
+        width: 100%;
+    }
+}

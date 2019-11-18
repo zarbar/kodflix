@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 import ShowList from '../ShowList/ShowList';
+import './Details.css';
 
 export default function Details(props) {
     let { details } = useParams();
-    // const [message, setMessage] = useState('');
     const [thisShow, setThisShow] = useState('show title here');
+    const [synopsis, setSynopsis] = useState('show title here');
+    const [showImage, setShowImage] = useState('');
+    const [message, setMessage] = useState('');
 
     let findShow = () => {
         let show = ShowList().find(show => show.id === details);
         setThisShow(show ? show.title : undefined);
+        setSynopsis(show ? show.synopsis : 'Synopsis coming soon');
+        setShowImage(show ? show.image : '');
     };
 
     useEffect(
@@ -18,26 +23,37 @@ export default function Details(props) {
         }, []
     )
 
+    React.useEffect(
+        () => {
+            setTimeout(() => setMessage('Coming Soon'), 3000);
+        }, [thisShow]
+    )
+
     if (thisShow === undefined) {
         return <Redirect to='/notFound' />
     }
 
     return (
         <>
-            <h1>This is the details page for:<br />
-                {thisShow}<br />
-            </h1>
-            <Link to='/'>Go Back</Link>
-            <br />
-            {/* <div>{message}</div> */}
+            <div className="containerDetails">
+                <div className="itemDetails">
+                    <h1>{thisShow}</h1>
+                    <div className='synopsis'>
+                        <h2>{synopsis}</h2>
+                        <h3>
+                            {message} <br />
+                            <a href='/'>Go Back</a>
+                        </h3>
+                    </div>
+                </div>
+                <div className="itemDetails">
+                    <img className='imageDetails' src={showImage} alt={thisShow} />
+                </div>
+            </div>
+
         </>
     );
 
 }
 
 
-  // React.useEffect(
-    //     () => {
-    //         setTimeout(() => setMessage('Coming Soon! :-P'), 3000);
-    //     }, []
-    // )

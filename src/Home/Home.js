@@ -4,14 +4,16 @@ import GetShow from '../GetShow/GetShow';
 import killerTomato from './killer-tomato.jpg';
 
 export default function Details(props) {
+
     return (
 
         <>
             <div className='welcomeHeader'>
-            <h1>Welcome to Kodflix</h1>
+                <h1 id="welcomMessage">Welcome to Kodflix</h1>
             </div>
             <img src={killerTomato} alt='attack of the killer tomatoes' />
             < GetShow />
+            <script src="shuffle-text.js"></script>
         </>
     );
 } 

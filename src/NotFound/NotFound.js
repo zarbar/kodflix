@@ -9,7 +9,7 @@ export default function NotFound(props) {
         <>
             <h1>Did you get lost?</h1>
             {/* <h2>{location.pathname} isn't happening.</h2> */}
-            <h2>Don't worry, you can start again</h2>
+            <h2>Time to <a href='/'>start again</a></h2>
         </>
     );
 } 
