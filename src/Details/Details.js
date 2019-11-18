@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, Redirect } from "react-router-dom";
 import ShowList from '../ShowList/ShowList';
 
 export default function Details(props) {
-    const [message, setMessage] = useState('');
+    let { details } = useParams();
+    // const [message, setMessage] = useState('');
+    const [thisShow, setThisShow] = useState('show title here');
 
-    React.useEffect(
+    let findShow = () => {
+        let show = ShowList().find(show => show.id === details);
+        setThisShow(show ? show.title : undefined);
+    };
+
+    useEffect(
         () => {
-            setTimeout(() => setMessage('Coming Soon! :-P'), 3000);
+            findShow();
         }, []
     )
-    let { details } = useParams();
 
-    let thisShow = ShowList().find(show => show.id === details);
+    if (thisShow === undefined) {
+        return <Redirect to='/notFound' />
+    }
 
     return (
         <>
             <h1>This is the details page for:<br />
-                {thisShow.title}
+                {thisShow}<br />
             </h1>
             <Link to='/'>Go Back</Link>
             <br />
-            <div>{message}</div>
-
-
+            {/* <div>{message}</div> */}
         </>
     );
-} 
+
+}
+
+
+  // React.useEffect(
+    //     () => {
+    //         setTimeout(() => setMessage('Coming Soon! :-P'), 3000);
+    //     }, []
+    // )

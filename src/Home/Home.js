@@ -7,7 +7,9 @@ export default function Details(props) {
     return (
 
         <>
+            <div className='welcomeHeader'>
             <h1>Welcome to Kodflix</h1>
+            </div>
             <img src={killerTomato} alt='attack of the killer tomatoes' />
             < GetShow />
         </>
