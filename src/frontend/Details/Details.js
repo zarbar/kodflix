@@ -34,6 +34,7 @@ export default function Details(props) {
             <div className="containerDetails">
                 <div className="itemDetails">
                     <h1>{thisShow}</h1>
+                    <h1>details: {details}</h1>
                     <div className='synopsis'>
                         <h2>{synopsis}</h2>
                         <h3>
