@@ -13,9 +13,9 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start-servers": "npm-run-all -p start start-back",
+    "start-servers": "npm-run-all -p start-front start-back",
     "start-back": "nodemon src/backend/app.js",
-    "start": "react-scripts start",
+    "start-front": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
