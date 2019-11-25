@@ -14,7 +14,6 @@
   },
   "scripts": {
     "start-servers": "npm-run-all -p start start-back",
-    //use command npm run start-servers
     "start-back": "nodemon src/backend/app.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
