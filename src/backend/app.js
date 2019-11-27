@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3002;
 const shows = require('./shows');
 
-app.get('/', (req, res) => res.send('Hello Worlds!'));
+app.get('/', (req, res) => res.send('Hello Universe!'));
 
 app.get('/rest/shows', (req, res) => res.send(shows()));
 
