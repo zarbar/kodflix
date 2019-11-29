@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 3001;
 const shows = require('./shows');
+
+app.use(express.static(path.join(__dirname, '../../build', 'index.html')));
 
 app.get('/', (req, res) => res.send('Hello big  Universe!'));
 
