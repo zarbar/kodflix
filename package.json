@@ -2,7 +2,7 @@
   "name": "kodflix",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3002",
+  "proxy": "http://localhost:3003",
   "dependencies": {
     "express": "^4.17.1",
     "node": "^10.15.3",
@@ -19,7 +19,8 @@
     "start-front": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "npm-run-all -s build start-back"
   },
   "eslintConfig": {
     "extends": "react-app"
