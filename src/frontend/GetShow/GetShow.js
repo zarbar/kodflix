@@ -14,7 +14,7 @@ export default function GetShow() {
         return (
             <div className="container">
                 {shows.map(show => (
-                    <Show image={show.image}
+                    <Show
                         title={show.title}
                         id={show.id}
                         key={show.id} />)
