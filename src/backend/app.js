@@ -4,9 +4,9 @@ const app = express();
 const port = process.env.PORT || 3003;
 const shows = require('./shows');
 
-app.get('/rest/shows', (req, res) => res.send(shows()));
-
 app.use(express.static(path.join(__dirname, '../../build')));
+
+app.get('/rest/shows', (req, res) => res.send(shows()));
 
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../../build', 'index.html'));
