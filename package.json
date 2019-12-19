@@ -14,13 +14,13 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
+    "start": "npm-run-all -s build start-back",
     "start-servers": "npm-run-all -p start-front start-back",
     "start-back": "nodemon src/backend/app.js",
     "start-front": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "npm-run-all -s build start-back"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
