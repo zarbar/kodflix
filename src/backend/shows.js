@@ -20,7 +20,7 @@ module.exports = function shows() {
 
         {
             title: "GLOW",
-            id: 'glow',
+            id: 'GLOW',
             synopsis: 'A look at the personal and professional lives of a group of women who perform for a wrestling organization in Los Angeles during the 1980s.'
         },
 
